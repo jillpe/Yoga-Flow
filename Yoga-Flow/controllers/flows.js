@@ -4,7 +4,7 @@ module.exports = {
     index,
     show,
     new: newFlow,
-    create
+    create,
 };
 
 async function index(req, res) {
@@ -30,7 +30,7 @@ function newFlow(req, res) {
 async function create(req, res) {
     try {
         const flow = await Flow.create(req.body);
-        res.redirect(`/flows/${flow._id}`);
+        res.redirect(`flows/${flow._id}`);
     } catch (err) {
         res.send(err);
     }

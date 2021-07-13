@@ -19,7 +19,7 @@ const reviewSchema = new Schema({
 });
 
 const poseSchema = new Schema({
-    name: {
+    poseName: {
         type: String,
         enum: ['Child', 'Downward Facing Dog', 'Warrior I', 'Triangle', 'Low Lunge']
     },
