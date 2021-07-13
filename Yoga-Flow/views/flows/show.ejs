@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Document</title>
+</head>
+<body>
+    <h1>show page</h1>
+    <section id="show-page">
+        <div><%= flow.name %></div>
+        <div>flow.category</div>   
+    </section><br><br>
+
+    <section id="review-list">
+        <label>Reviews</label>
+        <% flow.reviews.forEach(function(r) { %>
+            <div><%= r.userName %></div>
+            <div><%= r.age %></div>
+            <div><%= r.difficulty %></div>
+            <div><%= r.rating %></div>
+        <% }); %>
+    </section> <br>
+
+    <h2>Leave a Review</h2>
+    <form id="add-review-form" method="POST" action="/flows/<%= flow._id %>/reviews">
+        <label>Name:</label>
+        <input type="text" name="userName"> 
+        <label>Age:</label>
+        <input type="text" name="age"><br>
+        <label>Difficulty Level:</label>
+        <select name="difficulty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br>
+        <label>Rating:</label>
+        <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <input type="submit" value="Leave Review">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Document</title>
+</head>
+<body>
+    <h1>Build Your Flow</h1>
+    <form id="new-form" action="/flows" method="POST">
+        <label>Create a Name</label>
+        <input type="text" name="name"><br>
+        <label>Category:</label>
+        <select name="category">
+            <option value="Vinyasa">Vinyasa</option>
+            <option value="Hatha">Hatha</option>
+            <option value="Yin">Yin</option>
+            <option value="Power">Power</option>
+            <fieldset>
+                <legend>What poses do you want to include?</legend>
+                <label><input type="checkbox" name="poses[]" value="Child">Child's Pose</label>
+                <label><input type="checkbox" name="poses[]" value="Downward Facing Dog">Downward Facing Dog</label>
+                <label><input type="checkbox" name="poses[]" value="Warrior I">Warrior I</label>
+                <label><input type="checkbox" name="poses[]" value="Triangle">Triangle</label>
+                <label><input type="checkbox" name="poses[]" value="Low Lunge">Low Lunge</label>
+            </fieldset>
+        </select><br>
+        <input type="submit" value="Create Flow">
+    </form>
+</body>
+</html>
