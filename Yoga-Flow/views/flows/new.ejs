@@ -1,17 +1,17 @@
 <%- include('../partials/header') %>
     <h1>Build Your Flow</h1>
-
-    <form id="new-form" action="/flows" method="POST">
-        <label>Create a Name</label>
-        <input type="text" name="name"><br>
-        <label>Category:</label>
+    <div id="new-form">
+    <form action="/flows" method="POST">
+        <label id="create-name">Create a Name</label><br>
+        <input type="text" name="name"><br><br>
+        <label id="create-category">Category:</label><br><br>
         <select name="category">
             <option value="Vinyasa">Vinyasa</option>
             <option value="Hatha">Hatha</option>
             <option value="Yin">Yin</option>
             <option value="Power">Power</option>
-        </select><br>
-        <input type="submit" value="Create Flow">
+        </select><br><br><br>
+        <button class="btn btn-outline-info btn-sm" id="create-flow-button" type="submit">Create Flow</button>
     </form>
-
-    <%- include('../partials/footer') %>
+</div>
+<%- include('../partials/footer') %>

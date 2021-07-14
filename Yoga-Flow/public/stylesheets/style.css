@@ -1,6 +1,102 @@
 body {
-  padding: 50px;
+  margin: 0;
+  display: grid;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+main {
+  align-items: center;
+}
+
+h1, h2, h3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#all-flows-link{
+  display: flex;
+  justify-content: flex-start;
+}
+
+#all-flows-link > a {
+  color: white;
+  text-decoration: none;
+}
+
+#create-flows-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#create-flows-link > a {
+  color: white;
+  text-decoration: none;
+
+}
+
+#flow-list-heading {
+  font-size: 25px;
+}
+
+.flow-list-body {
+  color: gray;
+  font-size: 16px;
+}
+
+#category {
+  padding-top: 13px;
+}
+
+#all-flows-table {
+  margin-left: 10%;
+  width: 80%
+}
+
+#flow-name{
+  text-decoration: none;
+  font-size: 20px;
+  color: gray
+}
+
+#flow-name:hover {
+  text-decoration: underline;
+}
+
+#show-page {
+  margin-left:3%; 
+}
+
+#new-form {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5%;
+}
+
+#create-name, #create-category {
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 30px 0;
+  align-items: center;
+  padding: 0 30px 0 30px;
+  background-color: #EF71AF
+}
+
+nav > a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+nav > a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 a {
