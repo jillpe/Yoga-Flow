@@ -1,74 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Document</title>
-</head>
-<body>
-    <section id="show-page">
-        <div><%= flow.name %></div>
-        <div>flow.category</div>  
-    </section><br><br>
-        <form id="add-pose-form" action="/flows/<%= flow._id %>/poses" method="POST">
-            <fieldset>
-                <legend>What poses do you want to include?</legend>
-                <select name = "poseName">
-                    <option value="Child">Child's Pose</option>
-                    <option value="Downward Facing Dog">Downward Facing Dog</option>
-                    <option value="Warrior I">Warrior I</option>
-                    <option value="Triangle">Triangle Pose</option>
-                    <option value="Low Lunge">Low Lunge</option>
-                </select>
-                <label>Duration:</label>
-                <input type="text" name="duration">
-                <input type="submit" value="Add Poses">>
-            </fieldset>
-        </form>
+<%- include('../partials/header') %>
 
+<section id="show-page">
+    <div><%= flow.name %></div>
+    <div><%= flow.category %></div>  
     <h2>Poses</h2>
-        <% flow.poses.forEach(function(p) { %>
-            <div><%= p.poseName %></div>
-            <div><%= p.duration %></div>
-        <% }); %>
-    
-    
-    <section id="review-list">
-        <h2>Reviews</h2>
-        <% flow.reviews.forEach(function(r) { %>
-            <div><%= r.userName %></div>
-            <div><%= r.age %></div>
-            <div><%= r.difficulty %></div>
-            <div><%= r.rating %></div>
-        <% }); %>
-    </section>
+    <% flow.poses.forEach(function(p) { %>
+        <div><%= p.poseName %></div>
+        <div><%= p.duration %></div>
+    <% }); %>
 
-    <h3>Leave a Review</h3>
-    <form id="add-review-form" method="POST" action="/flows/<%= flow._id %>/reviews">
-        <label>Name:</label>
-        <input type="text" name="userName"> 
-        <label>Age:</label>
-        <input type="text" name="age"><br>
-        <label>Difficulty Level:</label>
-        <select name="difficulty">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select><br>
-        <label>Rating:</label>
-        <select name="rating">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <input type="submit" value="Leave Review">
+</section><br><br>
+    <form id="add-pose-form" action="/flows/<%= flow._id %>/poses" method="POST">
+        <fieldset>
+            <legend>What poses do you want to include?</legend>
+            <select name = "poseName">
+                <option value="Child">Child's Pose</option>
+                <option value="Downward Facing Dog">Downward Facing Dog</option>
+                <option value="Warrior I">Warrior I</option>
+                <option value="Triangle">Triangle Pose</option>
+                <option value="Low Lunge">Low Lunge</option>
+            </select>
+            <label>Duration:</label>
+            <input type="text" name="duration">
+            <input type="submit" value="Add Poses">>
+        </fieldset>
     </form>
 
-</body>
-</html>
+<section id="review-list">
+    <h2>Reviews</h2>
+    <% flow.reviews.forEach(function(r) { %>
+        <div><%= r.userName %></div>
+        <div><%= r.age %></div>
+        <div><%= r.difficulty %></div>
+        <div><%= r.rating %></div>
+    <% }); %>
+</section>
+
+<h3>Leave a Review</h3>
+<form id="add-review-form" method="POST" action="/flows/<%= flow._id %>/reviews">
+    <label>Name:</label>
+    <input type="text" name="userName"> 
+    <label>Age:</label>
+    <input type="text" name="age"><br>
+    <label>Difficulty Level:</label>
+    <select name="difficulty">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select><br>
+    <label>Rating:</label>
+    <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <input type="submit" value="Leave Review">
+</form>
+
+<%- include('../partials/footer') %>

@@ -1,7 +1,8 @@
+
 const Flow = require("../models/flow");
 
 module.exports = {
-    create
+    create,
 } 
 
 async function create(req, res) {
