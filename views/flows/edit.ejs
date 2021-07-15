@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<h1>Edit </h1>
+<form action="/flows/<%= flow._id %>?_method=PUT" method="POST">
+    <input type="text" name="name" value ="<% flow.name %>">
+    <select name="category" value="<% flow.category %>">
+        <option value="Vinyasa">Vinyasa</option>
+        <option value="Hatha">Hatha</option>
+        <option value="Yin">Yin</option>
+        <option value="Power">Power</option>
+    </select>
+    <input type="submit" value="Update">
+</form>
+
+
+
+<%- include('../partials/footer') %>

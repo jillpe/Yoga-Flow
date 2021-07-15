@@ -6,6 +6,7 @@
                 <th>Name</th>
                 <th>Category</th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody class="flow-list-body">
@@ -23,6 +24,9 @@
                         <form action="/flows/<%= f._id %>?_method=DELETE" method="POST">
                             <button type="submit" class="btn-close" aria-label="Close"></button>
                         </form>
+                    </td>
+                    <td>
+                        <a href="/flows/<%= f._id %>/edit">Edit this Flow</a>
                     </td>
                 </tr>
                 <% }); %>
