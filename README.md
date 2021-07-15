@@ -2,9 +2,13 @@ App Title:
 Yoga-Flow-App
 
 Screenshots:
+![ScreenShot1](https://user-images.githubusercontent.com/84697174/125707818-d62232dd-23c0-477a-983b-28092b31dd1e.png)
+
+
 
 Technologies Used:
 node.js, express, mongoose, css, and bootstrap
+
 
 Link:
 https://git.heroku.com/yoga-flow.git
