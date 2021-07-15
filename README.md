@@ -16,7 +16,7 @@ node.js, express, mongoose, css, and bootstrap
 
 
 Link:
-https://git.heroku.com/yoga-flow.git
+https://yoga-flow.herokuapp.com/
 
 Trello Board Link:
 https://trello.com/b/4dBo3NzS
